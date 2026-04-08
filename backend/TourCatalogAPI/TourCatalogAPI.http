@@ -1,4 +1,4 @@
-@TourCatalogAPI_HostAddress = http://localhost:8080
+@TourCatalogAPI_HostAddress = http://localhost:8081
 
 GET {{TourCatalogAPI_HostAddress}}/weatherforecast/
 Accept: application/json
