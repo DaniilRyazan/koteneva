@@ -3,7 +3,7 @@ using TourCatalogAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 // Убедитесь, что приложение слушает на правильном порту
-builder.WebHost.UseUrls("http://0.0.0.0:5058");
+builder.WebHost.UseUrls("http://0.0.0.0:8080");
 
 builder.Services.AddControllers();
 
