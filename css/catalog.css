@@ -1,0 +1,188 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Фильтры занимают 1 часть, карточки — 3 части */
+    gap: 20px; /* Расстояние между фильтрами и карточками */
+    align-items: start; /* Выравнивание элементов по верху */
+}
+
+h1 {
+    flex: 0 0 auto;
+    font-size: 34px;
+    gap: 20px;
+    align-items: flex-start; /* Выравнивание элементов по верхнему краю */
+    max-width: 1350px; /* Ограничиваем ширину контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+}
+
+.search {
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    max-width: 1200px;
+}
+
+.search input {
+    width: 100%;
+    padding: 15px; 
+    font-size: 16px;
+    max-width: 1200px;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column; /* Расположить фильтры друг под другом */
+    gap: 20px; /* Отступы между блоками фильтров */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+.filter {
+    display: block; /* Каждый фильтр на своей строке */
+}
+
+.country-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+input[type="range"] {
+    width: 100%; /* Слайдер занимает всю ширину родителя */
+}
+
+select {
+    width: 100%; /* Селект занимает всю ширину */
+    padding: 10px;
+}
+  
+.tours {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 3fr)); /* Автоматически заполнять ряды карточек */
+    gap: 20px; /* Отступы между карточками */
+}
+
+
+.tour {
+    background-color: #fff; /* Фон карточек */
+    border: 1px solid #ddd; /* Обрамление карточки */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 15px;
+    text-align: center;
+    transition: ease-in-out 0.3s;
+}
+
+.tour h2 a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.tour:hover {
+    transform: scale(1.03);
+}
+
+.tour img {
+    width: 100%; /* Изображение заполняет ширину контейнера */
+    height: 500px; /* Фиксированная высота контейнера */
+    object-fit: cover; /* Сохраняет пропорции изображения, обрезая излишки */
+    object-position: center; /* Центрирует изображение в пределах контейнера */
+}
+
+.tours h2 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+
+
+.buttonTop{
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(42, 146, 181, 0.4);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.tour-link{
+display:block;
+text-decoration:none;
+color:inherit;
+}
+.add-tour {
+    background: #fff;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.add-tour h2 {
+    margin-bottom: 20px;
+}
+
+.tour-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group.full {
+    flex-direction: column;
+}
+
+.tour-form input,
+.tour-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.tour-form input:focus,
+.tour-form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76,175,80,0.3);
+}
+
+.tour-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}

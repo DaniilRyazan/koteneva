@@ -1,0 +1,313 @@
+/* Community Page Styles */
+.content-block {
+    background: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 1200px;
+}
+
+.intro-text {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #666;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.stats-block {
+    background: linear-gradient(135deg, #8000ff, #e2a231);
+    color: white;
+}
+
+.stats-block h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-item {
+    background: rgba(255,255,255,0.2);
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.stat-item h3 {
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.stat-item p {
+    font-size: 1.1em;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.story-item, .gallery-item, .event-item {
+    margin-bottom: 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.story-item:hover, .gallery-item:hover, .event-item:hover {
+    border-color: #8000ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(128,0,255,0.1);
+}
+
+.story-question, .gallery-question, .event-question {
+    background: #f8f9fa;
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.story-question:hover, .gallery-question:hover, .event-question:hover {
+    background: #e9ecef;
+}
+
+.story-question h3, .gallery-question h3, .event-question h3 {
+    font-size: 1.3em;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.arrow {
+    font-size: 1.2em;
+    color: #8000ff;
+    transition: transform 0.3s ease;
+}
+
+.story-answer, .gallery-answer, .event-answer {
+    padding: 0 25px;
+    background: white;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; max-height: 0; }
+    to { opacity: 1; max-height: 500px; }
+}
+
+.story-answer p, .gallery-answer p, .event-answer p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 15px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+}
+
+.story-answer p:last-child, .gallery-answer p:last-child, .event-answer p:last-child {
+    border-bottom: none;
+    margin-bottom: 25px;
+}
+
+.story-meta {
+    color: #8000ff !important;
+    font-weight: 600;
+    font-size: 1.1em !important;
+    background: #f8f9fa;
+    padding: 10px 15px !important;
+    border-radius: 8px;
+    margin-bottom: 20px !important;
+}
+
+.gallery-intro {
+    font-size: 1.2em;
+    color: #666;
+    text-align: center;
+    margin: 20px 0 30px 0;
+    line-height: 1.6;
+}
+
+.event-button {
+    background: #8000ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 15px 0;
+}
+
+.event-button:hover {
+    background: #6a00d4;
+    transform: scale(1.05);
+}
+
+.share-block {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    text-align: center;
+}
+
+.share-block h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.share-block p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.share-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #8000ff;
+    box-shadow: 0 0 0 3px rgba(128,0,255,0.1);
+}
+
+.form-textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    background: #8000ff;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background: #6a00d4;
+    transform: translateY(-2px);
+}
+
+/* Alternating background colors for different sections */
+.content-block:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.content-block:nth-child(even) .story-item,
+.content-block:nth-child(even) .gallery-item,
+.content-block:nth-child(even) .event-item {
+    background: white;
+    border: 2px solid #e9ecef;
+}
+
+/* Special styling for different item types */
+.story-item {
+    border-left: 4px solid #8000ff;
+}
+
+.gallery-item {
+    border-left: 4px solid #e2a231;
+}
+
+.event-item {
+    border-left: 4px solid #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-block {
+        margin: 15px;
+        padding: 20px 15px;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-item {
+        padding: 20px 15px;
+    }
+    
+    .stat-item h3 {
+        font-size: 2em;
+    }
+    
+    .story-question, .gallery-question, .event-question {
+        padding: 15px 20px;
+    }
+    
+    .story-question h3, .gallery-question h3, .event-question h3 {
+        font-size: 1.2em;
+    }
+    
+    .story-answer, .gallery-answer, .event-answer {
+        padding: 0 20px;
+    }
+    
+    .story-answer p, .gallery-answer p, .event-answer p {
+        font-size: 1.1em;
+    }
+    
+    .share-form {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-text {
+        font-size: 1.1em;
+    }
+    
+    .story-question h3, .gallery-question h3, .event-question h3 {
+        font-size: 1.1em;
+    }
+    
+    .story-answer p, .gallery-answer p, .event-answer p {
+        font-size: 1em;
+    }
+    
+    .form-input, .form-textarea {
+        padding: 12px;
+        font-size: 1em;
+    }
+    
+    .submit-button {
+        padding: 12px 30px;
+        font-size: 1.1em;
+    }
+}

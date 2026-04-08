@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/css/header-footer.css">
+<link rel="stylesheet" href="/css/catalog.css">
+
+<title>Каталог туров | Tour-Catalog</title>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<a href="/index.html">
+<img src="/img/logo.svg" width="60" height="60">
+</a>
+
+<span>Авиасупер</span>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="/pages/catalog.html">Каталог туров</a></li>
+<li><a href="/pages/news.html">Новости</a></li>
+<li><a href="/pages/aboutUs.html">О нас</a></li>
+<li><a href="/pages/support.html">Поддержка</a></li>
+<li><a href="/pages/faq.html">Частые вопросы</a></li>
+<li><a href="/pages/community.html">Путешествуй с нами</a></li>
+<li><a href="/pages/loyalty.html">Программа лояльности</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<main>
+
+<h1>Каталог туров</h1>
+
+<div class="searchcourses">
+
+<div class="search">
+<input type="text" placeholder="Поиск...">
+</div>
+
+</div>
+
+
+<section class="filters">
+
+<h2>Фильтры каталога</h2>
+
+<div class="filter">
+
+<p style="font-weight: bold;">Длительность тура</p>
+
+<input type="range" min="1" max="12" step="1" value="0" name="duration">
+
+<p>1 - 12 месяцев</p>
+
+</div>
+
+
+<div class="filter">
+
+<p style="font-weight: bold;">Страны</p>
+
+<table class="country-table">
+
+<tr>
+<td><input type="checkbox" id="Россия" name="country"><label for="Россия">Россия</label></td>
+<td><input type="checkbox" id="Китай" name="country"><label for="Китай">Китай</label></td>
+<td><input type="checkbox" id="ОАЭ" name="country"><label for="ОАЭ">ОАЭ</label></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" id="Нидерланды" name="country"><label for="Нидерланды">Нидерланды</label></td>
+<td><input type="checkbox" id="Швеция" name="country"><label for="Швеция">Швеция</label></td>
+<td><input type="checkbox" id="Турция" name="country"><label for="Турция">Турция</label></td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="filter">
+
+<p style="font-weight: bold;">Цена</p>
+
+<select name="price">
+<option value="any">Любая</option>
+<option value="low">Низкая</option>
+<option value="average">Средняя</option>
+<option value="high">Высокая</option>
+</select>
+
+</div>
+
+  <h2>Добавить тур</h2>
+
+  <form id="add-tour-form" class="tour-form">
+    
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Название тура" required>
+      <input type="text" id="country" placeholder="Страна" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="city" placeholder="Город" required>
+      <input type="number" id="duration" placeholder="Длительность (мес.)" required>
+    </div>
+
+    <div class="form-group">
+      <input type="number" id="price" placeholder="Цена" required>
+      <input type="text" id="imageUrl" placeholder="Название картинки (moscow.png)" required>
+    </div>
+
+    <div class="form-group full">
+      <textarea id="description" placeholder="Описание тура" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Добавить тур</button>
+
+  </form>
+
+</section>
+
+
+<button class="buttonTop" onclick="topFunction()" id="myBtn">Наверх</button>
+
+
+
+<section class="tours" id="tours-container"></section>
+
+</main>
+
+<footer>
+
+<div class="foot">
+
+<p style="font-weight: bold;">Социальные сети</p>
+
+<ul>
+<li><a href="#">VK</a></li>
+<li><a href="#">Telegram</a></li>
+</ul>
+
+</div>
+
+<div class="foot">
+
+<p style="font-weight: bold;">Рабочее время</p>
+
+<p>Пн-Пт: 9:00 - 18:00</p>
+<p>Сб-Вс: выходной</p>
+
+</div>
+
+<div class="foot">
+
+<p style="font-weight: bold;">Контакты</p>
+
+<p>Адрес: улица, город, страна</p>
+<p>Телефон: +7 (123) 456-78-90</p>
+<p>Email: info@example.com</p>
+
+</div>
+
+</footer>
+
+<script src="/js/filters.js"></script>
+<script src="/js/button.js"></script>
+
+</body>
+
+</html>

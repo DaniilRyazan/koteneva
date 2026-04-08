@@ -1,0 +1,534 @@
+/* Loyalty Program Page Styles */
+.content-block {
+    background: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 1200px;
+}
+
+.intro-text {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #666;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Level Blocks */
+.level-item {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.level-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.level-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Бронзовый уровень */
+.level-item:nth-of-type(1) .level-question {
+    background: linear-gradient(135deg, #cd7f32, #e2a231);
+    color: white;
+}
+
+/* Серебряный уровень */
+.level-item:nth-of-type(2) .level-question {
+    background: linear-gradient(135deg, #c0c0c0, #e8e8e8);
+    color: #333;
+}
+
+/* Золотой уровень */
+.level-item:nth-of-type(3) .level-question {
+    background: linear-gradient(135deg, #ffd700, #ffea00);
+    color: #333;
+}
+
+.level-question:hover {
+    filter: brightness(1.1);
+}
+
+.level-question h3 {
+    font-size: 1.4em;
+    margin: 0;
+    font-weight: 700;
+}
+
+.arrow {
+    font-size: 1.3em;
+    transition: transform 0.3s ease;
+}
+
+.level-item:nth-of-type(1) .arrow {
+    color: white;
+}
+
+.level-item:nth-of-type(2) .arrow,
+.level-item:nth-of-type(3) .arrow {
+    color: #333;
+}
+
+.level-answer {
+    padding: 0 30px;
+    background: #f8f9fa;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; max-height: 0; }
+    to { opacity: 1; max-height: 500px; }
+}
+
+.level-answer p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+    color: #555;
+}
+
+.level-answer p:last-child {
+    border-bottom: none;
+    margin-bottom: 30px;
+}
+
+.level-requirements {
+    color: #8000ff !important;
+    font-weight: 700;
+    font-size: 1.1em !important;
+    background: white;
+    padding: 12px 20px !important;
+    border-radius: 8px;
+    margin: 20px 0 !important;
+    border-left: 4px solid #8000ff;
+}
+
+/* Process Block */
+.process-block {
+    background: linear-gradient(135deg, #8000ff, #e2a231);
+    color: white;
+}
+
+.process-block h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.process-item {
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.process-question {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.process-question:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.process-question h3 {
+    font-size: 1.3em;
+    margin: 0;
+    color: white;
+    font-weight: 600;
+}
+
+.process-answer {
+    padding: 0 25px;
+    background: rgba(255,255,255,0.05);
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+.process-answer p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 15px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.9);
+}
+
+.process-answer p:last-child {
+    border-bottom: none;
+    margin-bottom: 25px;
+}
+
+/* Earning and Spending Items */
+.earning-item, .spending-item {
+    margin-bottom: 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.earning-item:hover, .spending-item:hover {
+    border-color: #8000ff;
+    transform: translateY(-2px);
+}
+
+.earning-question, .spending-question {
+    background: #f8f9fa;
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.earning-question:hover, .spending-question:hover {
+    background: #e9ecef;
+}
+
+.earning-question h3, .spending-question h3 {
+    font-size: 1.3em;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.earning-answer, .spending-answer {
+    padding: 0 25px;
+    background: white;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+.earning-answer p, .spending-answer p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 15px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+}
+
+.earning-answer p:last-child, .spending-answer p:last-child {
+    border-bottom: none;
+    margin-bottom: 25px;
+}
+
+.points-rate, .points-cost {
+    color: #8000ff !important;
+    font-weight: 700;
+    font-size: 1.3em !important;
+    background: #f8f9fa;
+    padding: 10px 15px !important;
+    border-radius: 8px;
+    margin: 15px 0 !important;
+    text-align: center;
+}
+
+/* Status Block */
+.status-block {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.status-item {
+    border: 2px solid #8000ff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.status-question {
+    background: #8000ff;
+    color: white;
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.status-question:hover {
+    background: #6a00d4;
+}
+
+.status-question h3 {
+    font-size: 1.4em;
+    margin: 0;
+    font-weight: 700;
+}
+
+.status-answer {
+    padding: 25px 30px;
+    background: white;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+.status-answer p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 12px 0;
+    color: #555;
+}
+
+.progress-container {
+    margin: 20px 0;
+}
+
+.progress-bar {
+    background: #f0f0f0;
+    border-radius: 10px;
+    height: 15px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #8000ff, #e2a231);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.status-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.primary-button, .secondary-button, .action-button, .offer-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+}
+
+.primary-button, .action-button, .offer-button {
+    background: #8000ff;
+    color: white;
+}
+
+.primary-button:hover, .action-button:hover, .offer-button:hover {
+    background: #6a00d4;
+    transform: scale(1.05);
+}
+
+.secondary-button {
+    background: transparent;
+    color: #8000ff;
+    border: 2px solid #8000ff;
+}
+
+.secondary-button:hover {
+    background: #8000ff;
+    color: white;
+}
+
+/* Offers Block */
+.offers-block {
+    background: linear-gradient(135deg, #fff9e6, #fff0cc);
+}
+
+.offer-item {
+    margin-bottom: 20px;
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.offer-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255,215,0,0.2);
+}
+
+.offer-question {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.offer-question:hover {
+    filter: brightness(1.05);
+}
+
+.offer-question h3 {
+    font-size: 1.3em;
+    margin: 0;
+    color: #333;
+    font-weight: 700;
+}
+
+.offer-answer {
+    padding: 0 25px;
+    background: white;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+.offer-answer p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 15px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+}
+
+.offer-answer p:last-child {
+    border-bottom: none;
+    margin-bottom: 25px;
+}
+
+.offer-note {
+    color: #e2a231 !important;
+    font-weight: 600;
+    font-style: italic;
+    background: #fff9e6;
+    padding: 10px 15px !important;
+    border-radius: 8px;
+    border-left: 4px solid #e2a231;
+}
+
+/* Join Block */
+.join-block {
+    background: linear-gradient(135deg, #8000ff, #e2a231);
+    color: white;
+    text-align: center;
+}
+
+.join-block h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.join-block p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.join-button {
+    background: white;
+    color: #8000ff;
+    border: none;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.join-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.join-note {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.join-note a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Alternating background colors */
+.content-block:nth-child(even):not(.process-block):not(.join-block) {
+    background: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-block {
+        margin: 15px;
+        padding: 20px 15px;
+    }
+    
+    .level-question, .process-question, .earning-question, 
+    .spending-question, .status-question, .offer-question {
+        padding: 15px 20px;
+    }
+    
+    .level-question h3, .process-question h3, .earning-question h3,
+    .spending-question h3, .status-question h3, .offer-question h3 {
+        font-size: 1.2em;
+    }
+    
+    .level-answer, .process-answer, .earning-answer, 
+    .spending-answer, .status-answer, .offer-answer {
+        padding: 0 20px;
+    }
+    
+    .level-answer p, .process-answer p, .earning-answer p,
+    .spending-answer p, .status-answer p, .offer-answer p {
+        font-size: 1.1em;
+    }
+    
+    .status-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .primary-button, .secondary-button, .action-button, .offer-button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .join-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text {
+        font-size: 1.1em;
+    }
+    
+    .level-question h3, .process-question h3, .earning-question h3,
+    .spending-question h3, .status-question h3, .offer-question h3 {
+        font-size: 1.1em;
+    }
+    
+    .level-answer p, .process-answer p, .earning-answer p,
+    .spending-answer p, .status-answer p, .offer-answer p {
+        font-size: 1em;
+    }
+    
+    .points-rate, .points-cost {
+        font-size: 1.2em !important;
+    }
+}

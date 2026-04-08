@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/css/header-footer.css">
+<link rel="stylesheet" href="/css/tour.css">
+
+<title id="tourTitle">Тур</title>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<a href="/index.html">
+<img src="/img/logo.svg" width="60" height="60">
+</a>
+<span>Авиасупер</span>
+</div>
+
+<nav>
+<ul>
+
+<li><a href="/pages/catalog.html">Каталог туров</a></li>
+<li><a href="/pages/news.html">Новости</a></li>
+<li><a href="/pages/aboutUs.html">О нас</a></li>
+<li><a href="/pages/support.html">Поддержка</a></li>
+<li><a href="/pages/faq.html">Частые вопросы</a></li>
+<li><a href="/pages/community.html">Путешествуй с нами</a></li>
+<li><a href="/pages/loyalty.html">Программа лояльности</a></li>
+
+</ul>
+</nav>
+
+</header>
+
+<main>
+
+<h1 id="tourCountry">Тур</h1>
+
+<section class="tour-images">
+
+<div class="thumbnails">
+
+<div class="image-sec">
+<img id="tourImage" src="" alt="Фото тура">
+</div>
+
+</div>
+
+<div id="modal" class="modal-overlay">
+<span class="close-modal" onclick="closeModal()">&times;</span>
+<img id="modal-img" src="" class="modal-image">
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="description">
+
+<h2 id="tourCityTitle"></h2>
+
+<p id="tourDescription"></p>
+
+<p>
+<strong>Город:</strong>
+<span id="tourCity"></span>
+</p>
+
+<p>
+<strong>Цена:</strong>
+<span id="tourPrice"></span> рублей
+</p>
+
+<p>
+<strong>Длительность:</strong>
+<span id="tourDuration"></span> месяцев
+</p>
+
+</div>
+
+
+<div class="application">
+
+<p>Хотите узнать больше или приобрести этот тур? Оставьте заявку!</p>
+
+<button class="apply-button" onclick="openOrderModal()">
+Оставить заявку
+</button>
+
+</div>
+
+
+<div class="reviews">
+
+<h2>Отзывы путешественников</h2>
+
+<div class="review">
+<p>"Отличное путешествие!"</p>
+<p>Мария</p>
+</div>
+
+<div class="review">
+<p>"Очень понравилась атмосфера города."</p>
+<p>Андрей</p>
+</div>
+
+</div>
+
+</section>
+
+
+<div id="orderModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeOrderModal()">&times;</span>
+
+<p>Заявка на приобретение тура</p>
+
+<form id="order-form" method="post" onsubmit="submitOrder(event)">
+
+<div class="input-box">
+
+<label for="user-name">Имя:</label>
+
+<input
+type="text"
+name="user-name"
+id="user-name"
+class="input"
+placeholder="Введите ваше имя"
+required
+maxlength="50"
+oninput="validateName(this)"
+>
+
+</div>
+
+<div class="input-box">
+
+<label for="user-phone">Телефон:</label>
+
+<input
+type="text"
+name="user-phone"
+id="user-phone"
+class="input"
+placeholder="+7 (___) ___-__-__"
+required
+oninput="formatPhone(this)"
+>
+
+</div>
+
+
+<div class="input-box">
+
+<label for="country">Страна отправления:</label>
+
+<select name="country" id="country" class="input" required>
+<option value="russia">Россия</option>
+</select>
+
+<label for="city">Город:</label>
+
+<select name="city" id="city" class="input" required>
+<option value="moscow">Москва</option>
+<option value="petersburg">Санкт-Петербург</option>
+</select>
+
+</div>
+
+
+<div class="input-box">
+
+<label for="email">Email:</label>
+
+<input
+type="email"
+name="email"
+id="email"
+class="input"
+placeholder="Введите email"
+required
+oninput="validateEmail(this)"
+>
+
+</div>
+
+
+<div class="input-checkbox">
+
+<input type="checkbox" required>
+<label>Подтвердить обработку персональных данных</label>
+
+</div>
+
+
+<button class="button" type="submit">
+Отправить заявку
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<div id="orderConfirmation" class="confirmation-modal">
+
+<div class="confirmation-content">
+
+<p>Ваша заявка успешно отправлена!</p>
+
+<p id="order-summary"></p>
+
+<p>Ожидайте, с вами свяжется менеджер</p>
+
+<button onclick="closeConfirmation()">Закрыть</button>
+
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<div class="foot">
+
+<p style="font-weight: bold;">Контакты</p>
+
+<p>Адрес: улица, город, страна</p>
+<p>Телефон: +7 (123) 456-78-90</p>
+<p>Email: info@example.com</p>
+
+</div>
+
+</footer>
+
+
+<script src="/js/full_screen.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/tour-validation.js"></script>
+
+
+<script>
+
+function getImage(city){
+
+const images={
+"Пекин":"/img/pekin_1.png",
+"Москва":"/img/moscow_1.png",
+"Стамбул":"/img/stambul_1.png",
+"Стокгольм":"/img/stokgolm_1.png",
+"Амстердам":"/img/amsterdam_1.png",
+"Дубай":"/img/dubai_1.png"
+};
+
+return images[city] || "/img/pekin_1.png";
+
+}
+
+async function loadTour(){
+
+const params=new URLSearchParams(window.location.search);
+const id=params.get("id");
+
+if(!id){
+
+document.getElementById("tourCountry").textContent="Тур не найден";
+return;
+
+}
+
+try{
+
+const response=await fetch(`http://localhost:5058/api/tours/${id}`);
+
+const tour=await response.json();
+
+document.getElementById("tourTitle").textContent=tour.country;
+
+document.getElementById("tourCountry").textContent=tour.country;
+
+document.getElementById("tourCityTitle").textContent="Описание города "+tour.city;
+
+document.getElementById("tourDescription").textContent=tour.description;
+
+document.getElementById("tourCity").textContent=tour.city;
+
+document.getElementById("tourPrice").textContent=tour.price;
+
+document.getElementById("tourDuration").textContent=tour.duration;
+
+document.getElementById("tourImage").src=getImage(tour.city);
+
+}
+catch(e){
+
+console.error("Ошибка загрузки тура",e);
+
+document.getElementById("tourCountry").textContent="Ошибка загрузки тура";
+
+}
+
+}
+
+loadTour();
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/loyalty.css">
+    <title>Программа лояльности | Авиасупер</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="/img/logo.svg" width="60" height="60">
+        </a>
+        <span>Авиасупер</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/pages/catalog.html">Каталог туров</a></li> 
+          <li><a href="/pages/news.html">Новости</a></li>
+          <li><a href="/pages/aboutUs.html">О нас</a></li>
+          <li><a href="/pages/support.html">Поддержка</a></li>
+          <li><a href="/pages/faq.html">Частые вопросы</a></li>
+          <li><a href="/pages/community.html">Путешествуй с нами</a></li>
+          <li><a href="/pages/loyalty.html">Программа лояльности</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content-block">
+        <h1>Программа лояльности</h1>
+        <p class="intro-text">Станьте частью клуба постоянных клиентов Авиасупер и получайте эксклюзивные преимущества</p>
+      </div>
+        <div class="content-block status-block">
+                <h2>Ваш текущий статус</h2>
+                
+                <div class="status-item">
+                <div class="status-question" onclick="toggleStatus(this)">
+                    <h3>Статус: Стандарт | Баланс: 9850 баллов</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="status-answer">
+                    <p>Текущий уровень: Стандарт</p>
+                    <p>Баланс баллов: 9850</p>
+                    <p>До следующего уровня: 40000 баллов</p>
+                    <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 25%"></div>
+                    </div>
+                    <p>Прогресс: 25% до уровня Серебро</p>
+                    </div>
+                    <p>Следующее начисление: 01 января 2025</p>
+                    <p>Завершенных туров: 1</p>
+                    <p>Дата регистрации: 15 марта 2024</p>
+                    <div class="status-actions">
+                    <button class="primary-button">Зарегистрироваться</button>
+                    <button class="secondary-button">История операций</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+      <div class="content-block">
+        <h2>Уровни программы</h2>
+        
+        <div class="level-item">
+          <div class="level-question" onclick="toggleLevel(this)">
+            <h3>Стандарт - 0-49999 баллов</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="level-answer">
+            <p class="level-requirements">Требуется: 1 завершенный тур</p>
+            <p>5% кешбэк баллами</p>
+            <p>Приветственные 500 баллов</p>
+            <p>Доступ к базовым турам</p>
+            <p>Email рассылка с акциями</p>
+            <p>Участие в программе накопления баллов</p>
+            <p>Доступ к мобильному приложению</p>
+          </div>
+        </div>
+
+        <div class="level-item">
+          <div class="level-question" onclick="toggleLevel(this)">
+            <h3>Серебро - 50000-149999 баллов</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="level-answer">
+            <p class="level-requirements">Требуется: 3 завершенных тура</p>
+            <p>7% кешбэк баллами</p>
+            <p>1000 приветственных баллов</p>
+            <p>Доступ к премиум турам</p>
+            <p>Персональный менеджер</p>
+            <p>Приоритетная поддержка</p>
+            <p>Бесплатный визовый сервис</p>
+            <p>Ускоренное рассмотрение заявок</p>
+            <p>Эксклюзивные предложения по email</p>
+          </div>
+        </div>
+
+        <div class="level-item">
+          <div class="level-question" onclick="toggleLevel(this)">
+            <h3>Золото - 150000+ баллов</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="level-answer">
+            <p class="level-requirements">Требуется: 5 завершенных туров</p>
+            <p>10% кешбэк баллами</p>
+            <p>2000 приветственных баллов</p>
+            <p>Доступ ко всем турам</p>
+            <p>Персональный менеджер 24/7</p>
+            <p>Максимальный приоритет поддержки</p>
+            <p>Все включено: визы, страховки, трансферы</p>
+            <p>Эксклюзивные закрытые туры</p>
+            <p>Приглашения на специальные мероприятия</p>
+            <p>Персональные консультации по путешествиям</p>
+            <p>Возможность влиять на разработку новых маршрутов</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block process-block">
+        <h2>Как работает программа</h2>
+        
+        <div class="process-item">
+          <div class="process-question" onclick="toggleProcess(this)">
+            <h3>1 Регистрация в программе</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="process-answer">
+            <p>Автоматическая регистрация после первого тура</p>
+            <p>Получение приветственных баллов</p>
+            <p>Доступ к личному кабинету</p>
+            <p>Начало накопления баллов</p>
+            <p>Получение статуса Стандарт</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <div class="process-question" onclick="toggleProcess(this)">
+            <h3>2 Накопление баллов</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="process-answer">
+            <p>Бронирование туров: 10 баллов за каждые 1000 рублей</p>
+            <p>Приглашение друзей: 5000 баллов за каждого</p>
+            <p>Отзывы о турах: 1000 баллов за отзыв</p>
+            <p>Активность в сообществе: до 500 баллов в месяц</p>
+            <p>День рождения: 2000 баллов ежегодно</p>
+            <p>Годовщина: 1000 баллов ежегодно</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <div class="process-question" onclick="toggleProcess(this)">
+            <h3>3 Использование баллов</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="process-answer">
+            <p>Оплата туров: 1000 баллов = 1000 рублей</p>
+            <p>Апгрейд отелей: от 5000 баллов</p>
+            <p>Дополнительные услуги: от 2000 баллов</p>
+            <p>Подарочные карты: от 10000 баллов</p>
+            <p>Эксклюзивные туры: от 50000 баллов</p>
+            <p>Специальные experiences: индивидуальный расчет</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <div class="process-question" onclick="toggleProcess(this)">
+            <h3>4 Повышение статуса</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="process-answer">
+            <p>Автоматическое повышение при достижении лимита баллов</p>
+            <p>Уведомление о новом статусе по email</p>
+            <p>Получение новых привилегий</p>
+            <p>Доступ к эксклюзивным предложениям</p>
+            <p>Расширенный сервис и поддержка</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Способы заработка баллов</h2>
+        
+        <div class="earning-item">
+          <div class="earning-question" onclick="toggleEarning(this)">
+            <h3>Бронирование туров</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="earning-answer">
+            <p class="points-rate">10 баллов за каждые 1000 рублей</p>
+            <p>Основной способ накопления баллов</p>
+            <p>Чем дороже тур тем больше баллов</p>
+            <p>Баллы начисляются после завершения тура</p>
+            <p>Действует для всех типов туров</p>
+            <p>Нет ограничений по сумме начисления</p>
+          </div>
+        </div>
+
+        <div class="earning-item">
+          <div class="earning-question" onclick="toggleEarning(this)">
+            <h3>Приглашение друзей</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="earning-answer">
+            <p class="points-rate">5000 баллов за каждого друга</p>
+            <p>Друг должен совершить бронирование по вашей рекомендации</p>
+            <p>Минимальная стоимость тура друга: 100000 рублей</p>
+            <p>Максимальное количество друзей в год: 10</p>
+            <p>Баллы начисляются после завершения тура другом</p>
+            <p>Друг также получает бонусные баллы</p>
+          </div>
+        </div>
+
+        <div class="earning-item">
+          <div class="earning-question" onclick="toggleEarning(this)">
+            <h3>Отзывы и активность</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="earning-answer">
+            <p class="points-rate">1000 баллов за отзыв + до 500 баллов в месяц</p>
+            <p>Развернутый отзыв о туре с фото: 1000 баллов</p>
+            <p>Участие в мероприятиях сообщества: до 200 баллов</p>
+            <p>Публикация фото в соцсетях с хештегом: до 300 баллов</p>
+            <p>Максимально в месяц: 500 баллов</p>
+            <p>Начисления производятся в конце каждого месяца</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Как потратить баллы</h2>
+        
+        <div class="spending-item">
+          <div class="spending-question" onclick="toggleSpending(this)">
+            <h3>Оплата туров</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="spending-answer">
+            <p class="points-cost">1000 баллов = 1000 рублей</p>
+            <p>Можно оплатить до 50% стоимости тура</p>
+            <p>Минимальная сумма оплаты: 5000 баллов</p>
+            <p>Возможность комбинировать с другими акциями</p>
+            <p>Быстрое списание баллов при бронировании</p>
+            <p>Остаток баллов сохраняется на счете</p>
+            <button class="action-button">Использовать баллы</button>
+          </div>
+        </div>
+
+        <div class="spending-item">
+          <div class="spending-question" onclick="toggleSpending(this)">
+            <h3>Апгрейд услуг</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="spending-answer">
+            <p class="points-cost">от 5000 баллов</p>
+            <p>Повышение категории отеля: от 5000 баллов</p>
+            <p>Улучшение номера: от 3000 баллов</p>
+            <p>Дополнительные экскурсии: от 2000 баллов</p>
+            <p>Трансферы повышенной комфортности: от 1500 баллов</p>
+            <p>Страховки с расширенным покрытием: от 2500 баллов</p>
+            <button class="action-button">Выбрать апгрейд</button>
+          </div>
+        </div>
+
+        <div class="spending-item">
+          <div class="spending-question" onclick="toggleSpending(this)">
+            <h3>Эксклюзивные предложения</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="spending-answer">
+            <p class="points-cost">от 50000 баллов</p>
+            <p>Закрытые туры для членов клуба: от 50000 баллов</p>
+            <p>Индивидуальные маршруты: от 75000 баллов</p>
+            <p>Путешествия с экспертами: от 100000 баллов</p>
+            <p>Уникальные experiences: индивидуальный расчет</p>
+            <p>Ранний доступ к новым направлениям</p>
+            <button class="action-button">Посмотреть предложения</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block offers-block">
+        <h2>Эксклюзивные предложения</h2>
+        
+        <div class="offer-item">
+          <div class="offer-question" onclick="toggleOffer(this)">
+            <h3>Раннее бронирование 2025</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="offer-answer">
+            <p>Скидка 25% на туры с вылетом в 2025 году</p>
+            <p>Дополнительно 5% баллами при оплате</p>
+            <p>Бесплатная отмена за 60 дней до вылета</p>
+            <p>Приоритетный выбор дат и отелей</p>
+            <p class="offer-note">Доступно для уровней: Серебро, Золото</p>
+            <p>Срок действия: до 31 января 2025</p>
+            <button class="offer-button">Посмотреть туры</button>
+          </div>
+        </div>
+
+        <div class="offer-item">
+          <div class="offer-question" onclick="toggleOffer(this)">
+            <h3>Закрытый тур в Японию</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="offer-answer">
+            <p>Эксклюзивный маршрут по неизведанным уголкам Японии</p>
+            <p>Посещение частных садов и чайных церемоний</p>
+            <p>Встречи с местными мастерами и ремесленниками</p>
+            <p>Проживание в традиционных рёканах</p>
+            <p class="offer-note">Только для уровня: Золото</p>
+            <p>Группа ограничена: 12 человек</p>
+            <button class="offer-button">Подробнее о туре</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block join-block">
+        <h2>Готовы присоединиться?</h2>
+        <p>Начните копить баллы уже с первого тура и откройте мир эксклюзивных преимуществ</p>
+        <div class="join-actions">
+          <button class="join-button">Зарегистрироваться в программе</button>
+          <p class="join-note">Уже участник? <a href="#">Войдите в личный кабинет</a></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <p style="font-weight: bold;">Навигация</p>
+        <ul>
+          <li><a href="/pages/catalog.html">Каталог туров</a></li>
+          <li><a href="/pages/news.html">Новости</a></li>
+          <li><a href="/pages/aboutUs.html">О нас</a></li>
+          <li><a href="/pages/support.html">Поддержка</a></li>
+          <li><a href="/pages/faq.html">Частые вопросы</a></li>
+          <li><a href="/pages/community.html">Путешествуй с нами</a></li>
+          <li><a href="/pages/loyalty.html">Программа лояльности</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Социальные сети</p>
+        <ul>
+          <li><a href="#">VK</a></li>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Рабочее время</p>
+        <p>Пн-Пт: 9:00 - 18:00</p>
+        <p>Сб-Вс: выходной</p>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Контакты</p>
+        <p>Адрес: улица, город, страна</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Email: info@example.com</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleLevel(element) {
+        const answer = element.nextElementSibling;
+        const arrow = element.querySelector('.arrow');
+        
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          arrow.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.display = 'block';
+          arrow.style.transform = 'rotate(180deg)';
+        }
+      }
+
+      function toggleProcess(element) {
+        const answer = element.nextElementSibling;
+        const arrow = element.querySelector('.arrow');
+        
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          arrow.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.display = 'block';
+          arrow.style.transform = 'rotate(180deg)';
+        }
+      }
+
+      function toggleEarning(element) {
+        const answer = element.nextElementSibling;
+        const arrow = element.querySelector('.arrow');
+        
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          arrow.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.display = 'block';
+          arrow.style.transform = 'rotate(180deg)';
+        }
+      }
+
+      function toggleSpending(element) {
+        const answer = element.nextElementSibling;
+        const arrow = element.querySelector('.arrow');
+        
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          arrow.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.display = 'block';
+          arrow.style.transform = 'rotate(180deg)';
+        }
+      }
+
+      function toggleStatus(element) {
+        const answer = element.nextElementSibling;
+        const arrow = element.querySelector('.arrow');
+        
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          arrow.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.display = 'block';
+          arrow.style.transform = 'rotate(180deg)';
+        }
+      }
+
+      function toggleOffer(element) {
+        const answer = element.nextElementSibling;
+        const arrow = element.querySelector('.arrow');
+        
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          arrow.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.display = 'block';
+          arrow.style.transform = 'rotate(180deg)';
+        }
+      }
+
+      // Закрыть все блоки при загрузке страницы
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.level-answer, .process-answer, .earning-answer, .spending-answer, .status-answer, .offer-answer').forEach(answer => {
+          answer.style.display = 'none';
+        });
+      });
+    </script>
+  </body>
+</html>

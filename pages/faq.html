@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/faq.css">
+    <title>Частые вопросы | Авиасупер</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="/img/logo.svg" width="60" height="60">
+        </a>
+        <span>Авиасупер</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/pages/catalog.html">Каталог туров</a></li> 
+          <li><a href="/pages/news.html">Новости</a></li>
+          <li><a href="/pages/aboutUs.html">О нас</a></li>
+          <li><a href="/pages/support.html">Поддержка</a></li>
+          <li><a href="/pages/faq.html">Частые вопросы</a></li>
+          <li><a href="/pages/community.html">Путешествуй с нами</a></li>
+          <li><a href="/pages/loyalty.html">Программа лояльности</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content-block">
+        <h1>Частые вопросы</h1>
+        <p class="intro-text">На этой странице мы собрали ответы на самые популярные вопросы о наших турах, бронировании и подготовке к путешествиям.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Выберите категорию вопросов</h2>
+        <div class="categories-container">
+          <div class="category-item" onclick="showCategory('booking')">
+            <h3>Бронирование и оплата</h3>
+            <p>Вопросы о заказе и оплате туров</p>
+          </div>
+          <div class="category-item" onclick="showCategory('documents')">
+            <h3>Документы и визы</h3>
+            <p>Визы, страховки, паспорта</p>
+          </div>
+          <div class="category-item" onclick="showCategory('travel')">
+            <h3>Путешествие</h3>
+            <p>Перелет, проживание, экскурсии</p>
+          </div>
+          <div class="category-item" onclick="showCategory('safety')">
+            <h3>Безопасность</h3>
+            <p>Гарантии и страховки</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Бронирование и оплата -->
+      <div class="content-block faq-section active" id="booking">
+        <h2>Бронирование и оплата</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Как забронировать тур?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Выберите тур в каталоге</p>
+            <p>Нажмите кнопку Забронировать</p>
+            <p>Заполните форму с вашими данными</p>
+            <p>Оплатите 30% предоплаты</p>
+            <p>Получите подтверждение на email</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Какие способы оплаты доступны?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Банковские карты Visa MasterCard Мир</p>
+            <p>Электронные кошельки ЮMoney Qiwi</p>
+            <p>Банковский перевод</p>
+            <p>Рассрочка на 6 месяцев</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Можно ли изменить даты тура после бронирования?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Да изменение дат возможно за 45 дней до начала тура</p>
+            <p>Комиссия за изменение 5% от стоимости тура</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Есть ли скидки для групп?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Для групп от 4 человек скидка 10%</p>
+            <p>Для групп от 8 человек скидка 15%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Документы и визы -->
+      <div class="content-block faq-section" id="documents">
+        <h2>Документы и визы</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Какие документы нужны для путешествия?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Заграничный паспорт срок действия не менее 6 месяцев</p>
+            <p>Виза если требуется</p>
+            <p>Медицинская страховка</p>
+            <p>Подтверждение бронирования отеля и авиабилетов</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Помогаете ли вы с оформлением виз?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Консультация по пакету документов</p>
+            <p>Заполнение анкет</p>
+            <p>Подача документов в консульство</p>
+            <p>Срочное оформление виз</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Что делать если паспорт заканчивается через 3 месяца?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Рекомендуем срочно оформить новый паспорт</p>
+            <p>Большинство стран требуют чтобы паспорт был действителен не менее 6 месяцев с даты окончания поездки</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Путешествие и проживание -->
+      <div class="content-block faq-section" id="travel">
+        <h2>Путешествие и проживание</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Что включено в стоимость тура?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Авиаперелет туда обратно</p>
+            <p>Проживание в отеле выбранной категории</p>
+            <p>Питание по программе</p>
+            <p>Трансферы аэропорт отель аэропорт</p>
+            <p>Экскурсии по программе</p>
+            <p>Медицинская страховка</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Можно ли изменить отель после бронирования?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Изменение отеля возможно при наличии свободных номеров</p>
+            <p>Доплата уценка рассчитывается индивидуально</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Как происходит встреча в аэропорту?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Наш представитель с табличкой Авиасупер встречает вас в зоне прилета</p>
+            <p>Контакты гида вы получаете за 3 дня до вылета</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Безопасность и гарантии -->
+      <div class="content-block faq-section" id="safety">
+        <h2>Безопасность и гарантии</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Что делать в случае форс мажора?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Немедленно свяжитесь с нашим круглосуточным колл центром</p>
+            <p>Телефон +7 123 456 78 90</p>
+            <p>Мы решим любые проблемы с перелетами проживанием или здоровьем</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Какие гарантии вы предоставляете?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Финансовую гарантию всех бронирований</p>
+            <p>Юридическое сопровождение договора</p>
+            <p>Полный возврат средств при отмене тура по нашей вине</p>
+            <p>Круглосуточную поддержку в путешествии</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="loadFaq('booking', this)">
+            <h3>Что покрывает медицинская страховка?</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Несчастные случаи до 50 000 евро</p>
+            <p>Экстренную медицинскую помощь</p>
+            <p>Репатриацию</p>
+            <p>Стоматологическую помощь до 500 евро</p>
+            <p>Потерю багажа</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block support-block">
+        <h2>Не нашли ответ на свой вопрос?</h2>
+        <p>Наша служба поддержки поможет вам с любыми вопросами</p>
+        <a href="/pages/support.html" class="support-link">Связаться с поддержкой</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <p style="font-weight: bold;">Навигация</p>
+        <ul>
+          <li><a href="/pages/catalog.html">Каталог туров</a></li>
+          <li><a href="/pages/news.html">Новости</a></li>
+          <li><a href="/pages/aboutUs.html">О нас</a></li>
+          <li><a href="/pages/support.html">Поддержка</a></li>
+          <li><a href="/pages/faq.html">Частые вопросы</a></li>
+          <li><a href="/pages/community.html">Путешествуй с нами</a></li>
+          <li><a href="/pages/loyalty.html">Программа лояльности</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Социальные сети</p>
+        <ul>
+          <li><a href="#">VK</a></li>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Рабочее время</p>
+        <p>Пн-Пт: 9:00 - 18:00</p>
+        <p>Сб-Вс: выходной</p>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Контакты</p>
+        <p>Адрес: улица, город, страна</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Email: info@example.com</p>
+      </div>
+    </footer>
+
+    <script>
+      function showCategory(category) {
+        // Скрыть все секции
+        document.querySelectorAll('.faq-section').forEach(section => {
+          section.classList.remove('active');
+        });
+        
+        // Показать выбранную секцию
+        document.getElementById(category).classList.add('active');
+        
+        // Прокрутить к секции
+        document.getElementById(category).scrollIntoView({behavior: 'smooth'});
+      }
+
+      
+
+      // Закрыть все ответы при загрузке страницы
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+          answer.style.display = 'none';
+        });
+      });
+    </script>
+  </body>
+</html>
+<script src="/js/faq.js"></script>
