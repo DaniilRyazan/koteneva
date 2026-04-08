@@ -1,21 +1,21 @@
-# Указываем базовый образ для .NET 10
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+# Используем базовые образы для .NET 10.0
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 8081  # Открываем порт 8081
 
-# Указываем образ для сборки для .NET 10
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+# Далее идет сборка и публикация
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
-COPY ["TourCatalogAPI/TourCatalogAPI.csproj", "TourCatalogAPI/"]
-RUN dotnet restore "TourCatalogAPI/TourCatalogAPI.csproj"
-COPY . .
-WORKDIR "/src/TourCatalogAPI"
+COPY ["backend/TourCatalogAPI/TourCatalogAPI.csproj", "backend/TourCatalogAPI/"]
+RUN dotnet restore "backend/TourCatalogAPI/TourCatalogAPI.csproj"
+COPY . . 
+WORKDIR "/src/backend/TourCatalogAPI"
 RUN dotnet build "TourCatalogAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "TourCatalogAPI.csproj" -c Release -o /app/publish
 
-# Указываем финальный контейнер для работы
+# Финальный контейнер
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
