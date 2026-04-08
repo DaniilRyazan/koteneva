@@ -1,7 +1,7 @@
 # Используем базовые образы для .NET 7.0
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
-EXPOSE 8081  # Открываем порт 8081
+EXPOSE 8081
 
 # Далее идет сборка и публикация
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
