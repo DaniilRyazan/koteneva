@@ -1,8 +1,7 @@
 # Используем официальный .NET Core базовый образ
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 8080
 
 # Используем официальный .NET SDK для сборки
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
