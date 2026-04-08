@@ -2,8 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using TourCatalogAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-// Настройка порта для приложения
-builder.WebHost.UseUrls("http://0.0.0.0:8080");
 
 builder.Services.AddControllers();
 
